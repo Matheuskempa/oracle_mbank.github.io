@@ -1,12 +1,18 @@
 source "https://rubygems.org"
-gemspec
 
-gem "base64"
+gem "jekyll", "~> 4.3.3"
+gem "just-the-docs"
+
+# Plugins obrigatórios
+gem "jekyll-seo-tag"
+gem "jekyll-github-metadata"
+gem "jekyll-include-cache"
+gem "jekyll-sitemap"
 gem "csv"
+gem "base64"
+gem "logger"
 
-gem "jekyll-github-metadata", ">= 2.15"
-
-gem "jekyll-include-cache", group: :jekyll_plugins
-gem "jekyll-sitemap", group: :jekyll_plugins
-
-gem "html-proofer", "~> 5.0", :group => :development
+# Para desenvolvimento local (opcional)
+group :development do
+  gem "html-proofer", "~> 5.0"
+end
